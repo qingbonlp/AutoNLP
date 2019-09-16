@@ -1,28 +1,27 @@
 ## AutoNLP Solution(txta)
 
-## 数据清洗和特征选择
+## Data cleaning and feature selection
 
-1.对中英文文本分别做一些数据清洗
-2.对数据不平衡做一些处理
-3.使用自动化特征筛选
-4.自动化的处理长短文本
-        尝试hashingvctorizer对长文本进行降维，并对稀疏的短文本特征稠密处理
-5.中文使用字符级别的tf-idf进行特征选择，英文使用词级别的特征选择
+1.Do some data cleaning on Chinese and English texts respectively
+2.Do something about the data imbalance
+3.Use automated feature filtering
+4.Automated processing of long and short text
+        We tried hashingvctorizer to reduce the dimension of long text and to deal with sparse short text densely
+5.Character level tf-idf is used for feature selection in Chinese, while word level feature selection is used in English
 
-## 分片训练、多层抽样训练
+## Sub-training, multi-layer sampling training
 
-1.基于增量式的模型分层抽样
-2.对抽样的样本进行过采样
-3.控制训练样本的类别数量比例
-4.针对数据量过小的类别进行过采样
+1.Stratified sampling based on incremental model
+2.Oversampling of the sampled samples
+3.Control the proportion of training sample class quantity
+4.Oversampling is carried out for the categories with too small data volume
 
-## Linear-SVM+概率校准
+## Linear-SVM+ probability calibration
+1. Unbalanced category of automatic adjustment
+2. Number of iterations of automatic search model
+3. Automatic search for superparameters
 
-1.自动化调整类别不均衡
-2.自动搜索模型迭代次数
-3.自动搜索超参
 
-
-1.使用交叉验证生成器, 并对每个拆分模型参数对训练样本和测试样本的校准进行估计
-2.然后对折叠预测的概率进行平均
-3.由于这些概率并不总是一致, 因此执行后处理以使它们归一化.
+1. Use the cross-validation generator and estimate the calibration of training samples and test samples for each split model parameter
+2. Then average the probability of folding prediction
+3. Since these probabilities are not always consistent, post-processing is performed to normalize them.
