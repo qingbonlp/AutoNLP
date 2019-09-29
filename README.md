@@ -1,4 +1,4 @@
-## WAIC AutoNLP 3rd Solution(txta)
+## WAIC AutoNLP 3rd place Solution(txta)
 
 ## Data cleaning and feature selection
 
